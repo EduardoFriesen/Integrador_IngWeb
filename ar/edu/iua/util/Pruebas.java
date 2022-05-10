@@ -46,6 +46,8 @@ public class Pruebas {
         okk = modificarPlan.modificar(planes.get(1));
         System.out.println("Se modifico el plan " + planes.get(1) + " ? = " + (okk ? "SI" : "NO"));
 
+        GenerarEjemplosDePlanes.imprimirPlanes(BaseDeDatos.planes);
+
         BuscarEImprimirPlanes buscarEImprimirPlanes = new BuscarEImprimirPlanesImpl();
 
         BuscarPlan buscarPlan = new BuscarPlanImpl();
