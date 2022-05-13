@@ -7,13 +7,16 @@ import ar.edu.iua.modelo.academico.plan.Plan;
 public class ModificarPlanesImpl implements ModificarPlanes {
 
     public boolean modificar(List<Plan> planes) {
-        CrearPlan crearPlan = new CrearPlanImpl();
+        ModificarPlan b = new ModificarPlanImpl();
 
-        for (Plan plan : planes) {
-            boolean b = crearPlan.crear(plan);
-            if(b == false) return false;
+        for (int i = 0; i < planes.size(); i++) {
+            if (planes != null) {
+                if (b.modificar(planes.get(i)) == false) {
+                    return b.modificar(planes.get(i));
+                }
+            }
         }
         return true;
     }
-    
+
 }
