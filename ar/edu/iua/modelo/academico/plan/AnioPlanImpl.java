@@ -80,13 +80,30 @@ public class AnioPlanImpl extends AnioPlan {
 
     @Override
     public String toStringFull() {
-       String s = "";
-       if(plan != null) s += plan + "\n";
-       if(numero != null) s+= numero + "\n";
-       if(nombre != null) s+= nombre + "\n";
-        return s;
+
+        String z = (numero != null ? numero.toString() : "") + "\n" + (nombre != null ? nombre.toString() : "") + "\n";
+
+        for (Materia materia : materias) {
+            String m = materia.toStringFull().trim();
+            z += (m.length() > 0) ? m + "\n" : "";
+        }
+
+        return z.trim();
     }
 
+    public Object clone() throws CloneNotSupportedException {
+        AnioPlan anio = (AnioPlan) super.clone();
+        // anio.setPlan((Plan)this.getPlan().clone());
+        List<Materia> auxMaterias = new ArrayList<>();
+        for (Materia materia : this.materias) {
+            if (materia != null) {
+                materia.setAnio(this);
+                auxMaterias.add((Materia) materia.clone());
+            }
+        }
+        anio.setMaterias(auxMaterias);
+        return anio;
+    }
     
 
 }

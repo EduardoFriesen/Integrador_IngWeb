@@ -86,10 +86,26 @@ public class PlanImpl extends Plan {
 
     @Override
     public String toStringFull() {
-     String s = "";
-     if(anio != null) s+= anio + "\n";
-     if(estado != null) s+= estado + "\n";
-     return s;
+        String s = (anio != null ? anio.toString() : "") + "\n" + (estado != null ? estado.toString() : "") + "\n";
+
+        for(AnioPlan anioList : anios){
+            String p = anioList.toStringFull().trim();
+            s += (p.length() > 0) ? p + "\n" : "";
+        }
+
+        return s.trim();
     }
 
+    public Object clone() throws CloneNotSupportedException {
+        Plan plan = (Plan)super.clone();
+        List<AnioPlan> auxAnios = new ArrayList<>();
+        for(AnioPlan anio : this.anios){
+            if(anio != null){
+                anio.setPlan(this);
+                auxAnios.add((AnioPlan)anio.clone());
+            }
+        }
+        plan.setAnios(auxAnios);
+        return plan;
+    }
 }

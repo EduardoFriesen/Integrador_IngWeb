@@ -79,16 +79,11 @@ public class MateriaImpl extends Materia {
 
     @Override
     public String toStringFull() {
-        String s = "";
-        if (codigo != null)
-            s += codigo + "\n";
-        if (anio != null)
-            s += anio + "\n";
-        if (nombre != null)
-            s += nombre + "\n";
-        if (cargaHoraria != null)
-            s += cargaHoraria + "\n";
-        return s;
+
+        String s = (anio != null ? anio.toString() : "") + "\n" + (nombre != null ? nombre.toString() : "") + "\n" +
+        (codigo != null ? codigo.toString() : "") + "\n" + (cargaHoraria != null ? cargaHoraria.toString() : "") + "\n";
+
+        return s.trim();
     }
 
 }

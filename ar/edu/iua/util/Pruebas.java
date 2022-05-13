@@ -37,9 +37,6 @@ public class Pruebas {
 
         ModificarPlan modificarPlan = new ModificarPlanImpl();
 
-        BaseDeDatos.planes.get(0).setAnio(2050);
-        BaseDeDatos.planes.get(1).setAnio(2003);
-
         boolean okk = modificarPlan.modificar(BaseDeDatos.planes.get(0));
         System.out.println("Se modifico el plan " + planes.get(0) + " ? = " + (okk ? "SI" : "NO"));
 
@@ -48,15 +45,15 @@ public class Pruebas {
 
         GenerarEjemplosDePlanes.imprimirPlanes(BaseDeDatos.planes);
 
-        BuscarEImprimirPlanes buscarEImprimirPlanes = new BuscarEImprimirPlanesImpl();
-
         BuscarPlan buscarPlan = new BuscarPlanImpl();
+
+        Plan planEncontrado = buscarPlan.buscar(teclado.nextInt());
+
+
+       // BuscarEImprimirPlanes buscarEImprimirPlanes = new BuscarEImprimirPlanesImpl();
+
         
-        System.out.println("Ingrese valores de busqueda");
-        System.out.println(buscarPlan.buscar(teclado.nextInt()));
         
-        
-        //buscarEImprimirPlanes.buscar(teclado.next());
 
         
     }
