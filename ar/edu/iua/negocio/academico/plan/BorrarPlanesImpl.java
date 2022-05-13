@@ -3,7 +3,7 @@ package ar.edu.iua.negocio.academico.plan;
 import java.util.List;
 
 import ar.edu.iua.modelo.academico.plan.Plan;
-import ar.edu.iua.persistencia.BaseDeDatos;
+//import ar.edu.iua.persistencia.BaseDeDatos;
 
 public class BorrarPlanesImpl implements BorrarPlanes {
 

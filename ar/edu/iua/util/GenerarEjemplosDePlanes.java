@@ -340,7 +340,6 @@ public class GenerarEjemplosDePlanes {
             for(int j=0;j<materiasPrimerAño.length;j++){
             val = random.nextInt(0 + materiasPrimerAño.length) + 0;
             Double cargaHoraria = random.nextDouble(0 + 5) + 0;
-
             primer.getMaterias().add(new MateriaImpl(primer, codigoMateria++, materiasPrimerAño[val], cargaHoraria));
             }
 
