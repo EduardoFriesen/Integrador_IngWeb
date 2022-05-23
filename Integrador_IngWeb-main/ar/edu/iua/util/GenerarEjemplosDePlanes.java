@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import ar.edu.iua.modelo.EX.CrearPlanEx;
 import ar.edu.iua.modelo.academico.plan.*;
 import ar.edu.iua.negocio.academico.plan.CrearPlan;
 import ar.edu.iua.negocio.academico.plan.CrearPlanImpl;
@@ -16,7 +17,7 @@ public class GenerarEjemplosDePlanes {
     // Este metodo primero crea 2 planes, segun
     // https://monserrat.unc.edu.ar/secundario/plan-de-estudios/#1523542585948-acc3dfd8-8da3
     // y tambien crea de forma aleatoria una determinada cantidad de planes
-    public static List<Plan> generar(int cantidadAGenerar, boolean imprimirResultado) {
+    public static List<Plan> generar(int cantidadAGenerar, boolean imprimirResultado) throws CrearPlanEx {
 
         List<Plan> planes = new ArrayList<Plan>();
 
@@ -288,7 +289,7 @@ public class GenerarEjemplosDePlanes {
 
     }
 
-    private static void generarYAgregarPlanesAleatoriamente(int cantidadAGenerar, List<Plan> planes) {
+    private static void generarYAgregarPlanesAleatoriamente(int cantidadAGenerar, List<Plan> planes) throws CrearPlanEx {
         Random random = new Random(System.currentTimeMillis());
         CrearPlan crearPlan = new CrearPlanImpl();
         String materiasPrimerAño[] = { "Ciencias de la Vida y de la Tierra ", "Lengua y Literatura Castellanas I",
