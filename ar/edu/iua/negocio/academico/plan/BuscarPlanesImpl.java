@@ -5,22 +5,25 @@ import java.util.List;
 
 import ar.edu.iua.modelo.academico.plan.Plan;
 import ar.edu.iua.persistencia.BaseDeDatos;
+import ar.edu.iua.util.Traductor;
 
 public class BuscarPlanesImpl implements BuscarPlanes {
     public List<Plan> buscar(String terminos) {
-        List<Plan> r = new ArrayList<Plan>();
-        String[] arrayTerm = terminos.split(" ");
-        vuelta:
-        for (Plan p : BaseDeDatos.planes) {
-            String toStringFull = p.toStringFull().toLowerCase();
+        List<Plan> planesBuscados = new ArrayList<Plan>();
+
+        terminos = Traductor.TraducirCadena(terminos);
+        String[] arrayTerm = terminos.trim().toLowerCase().split(" ");
+        
+        vuelta: for (Plan plan : BaseDeDatos.planes) {
+            String toStringFull = plan.toStringFull().toLowerCase();
             for (String termino : arrayTerm) {
                 if (toStringFull.contains(termino.toLowerCase())) {
-                    r.add(p);
+                    planesBuscados.add(plan);
                     continue vuelta;
                 }
             }
         }
-        return r;
+        return planesBuscados;
     }
 
 }
