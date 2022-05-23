@@ -61,7 +61,7 @@ public class GenerarEjemplosDePlanes {
         Materia m10 = new MateriaImpl(primero, codigoMateria++, "Formación Ética y Ciudadana I", 3.0);
         Materia m11 = new MateriaImpl(primero, codigoMateria++, "Estrategias de Aprendizaje y Entornos Virtuales",
                 4.0);
-        Materia m12 = new MateriaImpl(primero, codigoMateria++, "Educación Física y Deportes I", 0.0);
+        Materia m12 = new MateriaImpl(primero, codigoMateria++, "Educación Física y Deportes I", 1.0);
 
         primero.getMaterias().add(m1);
         primero.getMaterias().add(m2);
@@ -80,7 +80,7 @@ public class GenerarEjemplosDePlanes {
 
         codigoMateria = 1;
 
-        segundo.getMaterias().add(new MateriaImpl(segundo, codigoMateria++, "Educación para la Salud", 4.0));
+        segundo.getMaterias().add(new MateriaImpl(segundo, codigoMateria++, "Eduardo Friesen", 4.0));
         segundo.getMaterias()
                 .add(new MateriaImpl(segundo, codigoMateria++, "Lengua y Literatura Castellanas II ", 5.0));
         segundo.getMaterias().add(new MateriaImpl(segundo, codigoMateria++, "Lengua y Cultura Latinas II ", 4.0));
@@ -115,34 +115,34 @@ public class GenerarEjemplosDePlanes {
         // MATERIAS DEL PLAN 2018 - CUARTO AÑO
 
         cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "Biologia 1", 3.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
-        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 0.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
+        cuarto.getMaterias().add(new MateriaImpl(cuarto, codigoMateria++, "nombre", 1.0));
 
         // MATERIAS DE QUINTO AÑO
 
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
-        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 0.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
+        quinto.getMaterias().add(new MateriaImpl(quinto, codigoMateria++, "nombre", 1.0));
 
         // PLAN 2001
 
@@ -294,7 +294,7 @@ public class GenerarEjemplosDePlanes {
         String materiasPrimerAño[] = { "Ciencias de la Vida y de la Tierra ", "Lengua y Literatura Castellanas I",
                 "Lengua y Cultura Latinas I ", "Lengua y Cultura Inglesas I ", "Formación Musical I ",
                 "Formación Plástica I ", "Matemática I", "Geografía I ", "Historia I", "Formación Ética y Ciudadana I",
-                "Estrategias de Aprendizaje y Entornos Virtuales", "Educación Física y Deportes I" };
+                "Estrategias de Aprendizaje y Entornos Virtuales", "Educación Física y Deportes I", "Informatica"};
         String materiasSegundorAño[] = { "Ciencias de la Vida y de la Tierra ", "Lengua y Literatura Castellanas I",
                 "Lengua y Cultura Latinas I ", "Lengua y Cultura Inglesas I ", "Formación Musical I ",
                 "Formación Plástica I ", "Matemática I", "Geografía I ", "Historia I", "Formación Ética y Ciudadana I",
@@ -377,7 +377,7 @@ public class GenerarEjemplosDePlanes {
         }
     }
 
-    static void imprimirPlanes(List<Plan> planes) {
+    public static void imprimirPlanes(List<Plan> planes) {
         for (Plan plan : planes) {
             System.out.println("\n" + plan);
             for (AnioPlan anio : plan.getAnios()) {
