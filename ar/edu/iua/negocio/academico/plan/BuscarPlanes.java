@@ -2,6 +2,7 @@ package ar.edu.iua.negocio.academico.plan;
 
 import java.util.List;
 
+import ar.edu.iua.Excepciones.modeloEx.BuscarPlanEx;
 import ar.edu.iua.modelo.academico.plan.Plan;
 
 public interface BuscarPlanes {
@@ -13,6 +14,6 @@ public interface BuscarPlanes {
     // se debe buscar tanto en los atts directos del plan, como en todos sus años y materias  
 
     
-    List<Plan> buscar(String terminos);
+    List<Plan> buscar(String terminos) throws BuscarPlanEx;
     
 }

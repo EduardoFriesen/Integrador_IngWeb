@@ -2,6 +2,8 @@ package ar.edu.iua.negocio.academico.plan;
 
 import java.util.List;
 
+import ar.edu.iua.Excepciones.modeloEx.CrearPlanEx;
+import ar.edu.iua.Excepciones.modeloEx.ModificarPlanEx;
 import ar.edu.iua.modelo.academico.plan.Plan;
 
 public interface ModificarPlanes {
@@ -12,6 +14,6 @@ public interface ModificarPlanes {
             - planes no puede ser null
             - Ver las mismas reglas de ModificarPlan.modificar(Plan plan)
     */
-    boolean modificar(List<Plan> planes);    
+    boolean modificar(List<Plan> planes) throws CrearPlanEx, ModificarPlanEx;    
     
 }

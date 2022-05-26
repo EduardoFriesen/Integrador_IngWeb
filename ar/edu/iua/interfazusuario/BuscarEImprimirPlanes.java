@@ -1,5 +1,7 @@
 package ar.edu.iua.interfazusuario;
 
+import ar.edu.iua.Excepciones.modeloEx.BuscarPlanEx;
+
 public interface BuscarEImprimirPlanes {
     
 
@@ -20,6 +22,6 @@ public interface BuscarEImprimirPlanes {
         //      |  Plan de estudios 2013 (BORRADOR) |         
         //      -------------------------------------
 
-    void buscar(String terminos);
+    void buscar(String terminos) throws BuscarPlanEx;
     
 }

@@ -1,91 +1,78 @@
 package ar.edu.iua.negocio.academico.plan;
 
+import ar.edu.iua.Excepciones.modeloEx.CrearPlanEx;
 import ar.edu.iua.modelo.academico.plan.AnioPlan;
 import ar.edu.iua.modelo.academico.plan.Materia;
 import ar.edu.iua.modelo.academico.plan.Plan;
 
 public class CrearPlanImpl implements CrearPlan {
 
-    public boolean crear(Plan plan) {
-        if (plan == null) {
-            System.out.println("plan null");
-            return false;
+    public boolean crear(Plan plan) throws CrearPlanEx {
+        if(plan == null){
+            throw new CrearPlanEx("El plan es nulo. VerificarIntegridad.java");//Plan no puede ser null
         }
         if (!plan.isEstadoActivo() && !plan.isEstadoNoActivo() && !plan.isEstadoBorrador()) {
-            System.out.println("plan sin estado");
             return false;
         }
         if (plan.getAnios() == null && !plan.isEstadoBorrador()) {
-            System.out.println("plan anio null");
-            return false;
+            throw new CrearPlanEx("plan anio null");
         }
         if (plan.getAnio().intValue() < 1990 && plan.getAnio().intValue() > 2040) {
-            System.out.println("plan anio mal");
-            return false;
+            throw new CrearPlanEx("plan anio mal");
         }
         for (AnioPlan anio : plan.getAnios()) {
             if (anio.getNombre() == null && !plan.isEstadoBorrador()) {
-                System.out.println("plan nombre null");
-                return false;
+                throw new CrearPlanEx("plan nombre null");
             }
         }
         for (AnioPlan anio : plan.getAnios()) {
             if (anio.getMaterias() == null && !plan.isEstadoBorrador()) {
-                System.out.println("plan materias null");
-                return false;
+                throw new CrearPlanEx("plan materias null");
             }
         }
         for (AnioPlan anio : plan.getAnios()) {
             if (anio.getNumero() <= 0) {
-                System.out.println("plan numero negativo");
-                return false;
+                throw new CrearPlanEx("plan numero negativo");
             }
         }
         for (AnioPlan anio : plan.getAnios()) {
             if (anio.getNumero() == null && !plan.isEstadoBorrador()) {
-                System.out.println("plan numero null");
-                return false;
+                throw new CrearPlanEx("plan numero null");
             }
         }
         for (AnioPlan anio : plan.getAnios()) {
             if (anio.getMaterias() == null && !plan.isEstadoBorrador()) {
-                System.out.println("plan materias null");
-                return false;
+                throw new CrearPlanEx("plan materias null");
             }
         }
         for (AnioPlan anio : plan.getAnios()) {
             for (Materia materia : anio.getMaterias())
                 if (materia.getCodigo() == null && !plan.isEstadoBorrador()) {
-                    System.out.println("plan codigo null");
-                    return false;
+                    throw new CrearPlanEx("plan codigo null");
                 }
         }
         for (AnioPlan anio : plan.getAnios()) {
             for (Materia materia : anio.getMaterias())
                 if (materia.getCodigo() <= 0) {
-                    System.out.println("plan materia negativa");
-                    return false;
+                    throw new CrearPlanEx("plan materia negativa");
                 }
         }
         for (AnioPlan anio : plan.getAnios()) {
             for (Materia materia : anio.getMaterias())
                 if (materia.getNombre() == null && !plan.isEstadoBorrador()) {
-                    System.out.println("plan nombre materia null");
-                    return false;
+                    throw new CrearPlanEx("plan nombre materia null");
                 }
         }
         for (AnioPlan anio : plan.getAnios()) {
             for (Materia materia : anio.getMaterias())
                 if (materia.getCargaHoraria() == null && !plan.isEstadoBorrador()) {
-                    System.out.println("plan carga horaria null");
-                    return false;
+                    throw new CrearPlanEx("plan carga horaria null");
                 }
         }
         for (AnioPlan anio : plan.getAnios()) {
             for (Materia materia : anio.getMaterias())
                 if (materia.getCargaHoraria() <= 0) {
-                    System.out.println("plan materia carga 0");
-                    return false;
+                    throw new CrearPlanEx("plan materia carga 0");
                 }
         }
 

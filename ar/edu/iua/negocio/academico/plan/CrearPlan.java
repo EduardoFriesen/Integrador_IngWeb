@@ -1,5 +1,6 @@
 package ar.edu.iua.negocio.academico.plan;
 
+import ar.edu.iua.Excepciones.modeloEx.CrearPlanEx;
 import ar.edu.iua.modelo.academico.plan.Plan;
 
 public interface CrearPlan {
@@ -28,7 +29,7 @@ public interface CrearPlan {
     */
     
 
-    boolean crear(Plan plan); 
+    boolean crear(Plan plan) throws CrearPlanEx; 
 
 
 

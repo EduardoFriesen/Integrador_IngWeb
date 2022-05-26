@@ -2,6 +2,9 @@ package ar.edu.iua.util;
 
 import java.util.List;
 
+import ar.edu.iua.Excepciones.modeloEx.BuscarPlanEx;
+import ar.edu.iua.Excepciones.modeloEx.CrearPlanEx;
+import ar.edu.iua.Excepciones.modeloEx.ModificarPlanEx;
 import ar.edu.iua.interfazusuario.BuscarEImprimirPlanes;
 import ar.edu.iua.interfazusuario.BuscarEImprimirPlanesImpl;
 
@@ -21,7 +24,7 @@ import ar.edu.iua.persistencia.BaseDeDatos;
 
 public class Pruebas {
 
-    public void probar() {
+    public void probar() throws CrearPlanEx, BuscarPlanEx, ModificarPlanEx {
 
         List<Plan> planes = GenerarEjemplosDePlanes.generar(5, false);
 
