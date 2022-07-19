@@ -1,15 +1,10 @@
-package ar.edu.iua.modelo.academico.plan;
+package ar.edu.iua.modelo_webservices.academico;
 
 import java.util.List;
 
 import ar.edu.iua.modelo.Objeto;
-import ar.edu.iua.modelo_webservices.academico.MateriaImplWs;
 
-public abstract class AnioPlan extends Objeto {
-
-    abstract public Plan getPlan();
-
-    abstract void setPlan(Plan plan);
+public abstract class AnioPlanWs extends Objeto {
 
     abstract public Integer getNumero();
 
@@ -21,6 +16,6 @@ public abstract class AnioPlan extends Objeto {
 
     abstract public List<MateriaImplWs> getMaterias();
 
-    abstract public void setMaterias(List<Materia> materias);
+    abstract public void setMaterias(List<MateriaImplWs> materias);
 
 }

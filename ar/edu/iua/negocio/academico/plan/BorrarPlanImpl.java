@@ -6,6 +6,7 @@ import ar.edu.iua.persistencia.BaseDeDatos;
 
 public class BorrarPlanImpl implements BorrarPlan {
 
+    @Override
     public boolean borrar(Plan plan) throws BorrarPlanEx{
         for(int ii = 0; ii < BaseDeDatos.planes.size(); ii++){
             if(!plan.equals(null)){

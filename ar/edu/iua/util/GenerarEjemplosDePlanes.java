@@ -21,10 +21,6 @@ public class GenerarEjemplosDePlanes {
 
         List<Plan> planes = new ArrayList<Plan>();
 
-        // ==========================================================================
-
-        // PLAN 2018
-
         Plan plan2018 = new PlanImpl();
 
         plan2018.setAnio(2018);

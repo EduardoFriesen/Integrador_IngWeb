@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ar.edu.iua.modelo.academico.plan.Plan;
+import ar.edu.iua.modelo_webservices.academico.PlanWs;
 
 public class BaseDeDatos {
 
-    public static List<Plan> planes = new ArrayList<Plan>();
+    private static List<Plan> planes = new ArrayList<Plan>();
+
+    private static List<Plan> planesWebServices = new ArrayList<Plan>();
 
     public static Plan getPlan (int index) throws CloneNotSupportedException{
         
@@ -54,6 +57,14 @@ public class BaseDeDatos {
             }
         }
         return clonePlanes;
+    }
+
+    public static int planesSizeWs(){
+        return planesWebServices.size();
+    }
+
+    public static PlanWs getPlanWs (int index) throws CloneNotSupportedException{
+        return (PlanWs)planesWebServices.get(index).clone();
     }
     
 }
