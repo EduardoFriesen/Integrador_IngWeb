@@ -3,7 +3,7 @@ package ar.edu.iua.modelo_webservices.academico;
 import java.util.ArrayList;
 import java.util.List;
 
-import ar.edu.iua.modelo.academico.plan.AnioPlan;
+//import ar.edu.iua.modelo.academico.plan.AnioPlan;
 
 public class AnioPlanImplWs extends AnioPlanWs{
     private Integer numero;

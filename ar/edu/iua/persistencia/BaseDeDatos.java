@@ -8,9 +8,9 @@ import ar.edu.iua.modelo_webservices.academico.PlanWs;
 
 public class BaseDeDatos {
 
-    private static List<Plan> planes = new ArrayList<Plan>();
+    public static List<Plan> planes = new ArrayList<Plan>();
 
-    private static List<Plan> planesWebServices = new ArrayList<Plan>();
+    public static List<Plan> planesWebServices = new ArrayList<Plan>();
 
     public static Plan getPlan (int index) throws CloneNotSupportedException{
         
@@ -59,12 +59,42 @@ public class BaseDeDatos {
         return clonePlanes;
     }
 
-    public static int planesSizeWs(){
+    public static int planesSizeWs (){
         return planesWebServices.size();
     }
 
     public static PlanWs getPlanWs (int index) throws CloneNotSupportedException{
+        
         return (PlanWs)planesWebServices.get(index).clone();
     }
+
+    public static boolean setPlanWs (int index, PlanWs plan) throws CloneNotSupportedException{
+        boolean bandera = false;
     
+        planesWebServices.set(index, (PlanWs)plan.clone());
+        bandera = true;
+        
+        return bandera;
+    }
+    
+    public static boolean addPlanWs (PlanWs plan) throws CloneNotSupportedException{
+        boolean bandera = false;
+        
+        planesWebServices.add((PlanWs) plan.clone());
+        bandera = true;
+
+        return bandera;
+    }
+
+    public static void removePlanWs (int index){
+        planesWebServices.remove(index);
+    }
+
+    public static List<PlanWs> getListWs () throws CloneNotSupportedException{
+        List<PlanWs> clonePlanes = new ArrayList<>();
+        for(PlanWs plan:planesWebServices){
+            clonePlanes.add((PlanWs)plan.clone());
+        }
+        return clonePlanes;
+    }
 }

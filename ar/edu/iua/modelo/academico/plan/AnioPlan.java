@@ -3,7 +3,6 @@ package ar.edu.iua.modelo.academico.plan;
 import java.util.List;
 
 import ar.edu.iua.modelo.Objeto;
-import ar.edu.iua.modelo_webservices.academico.MateriaImplWs;
 
 public abstract class AnioPlan extends Objeto {
 
@@ -19,7 +18,7 @@ public abstract class AnioPlan extends Objeto {
 
     abstract public void setNombre(String nombre);
 
-    abstract public List<MateriaImplWs> getMaterias();
+    abstract public List<Materia> getMaterias();
 
     abstract public void setMaterias(List<Materia> materias);
 

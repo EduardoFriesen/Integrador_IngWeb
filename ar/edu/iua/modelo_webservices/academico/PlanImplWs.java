@@ -91,7 +91,7 @@ public class PlanImplWs extends PlanWs {
         return "Plan de estudios " + (anio != null ? anio.toString() : " desconocido");
     }
 
-    public String toStringF(){
+    public String toStringFull(){
 
         String s = (anio != null ? anio.toString() : "") + "\n" + (estado != null ? estado.toString() : "") + "\n";
 

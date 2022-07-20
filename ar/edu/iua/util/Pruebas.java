@@ -10,8 +10,8 @@ import ar.edu.iua.interfazusuario.BuscarEImprimirPlanesImpl;
 
 import ar.edu.iua.modelo.academico.plan.Plan;
 
-import ar.edu.iua.negocio.academico.plan.BuscarPlan;
-import ar.edu.iua.negocio.academico.plan.BuscarPlanImpl;
+//import ar.edu.iua.negocio.academico.plan.BuscarPlan;
+//import ar.edu.iua.negocio.academico.plan.BuscarPlanImpl;
 
 import ar.edu.iua.negocio.academico.plan.CrearPlanes;
 import ar.edu.iua.negocio.academico.plan.CrearPlanesImpl;
