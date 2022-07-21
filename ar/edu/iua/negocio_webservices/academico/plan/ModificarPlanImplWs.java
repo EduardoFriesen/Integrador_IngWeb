@@ -20,7 +20,7 @@ public class ModificarPlanImplWs implements ModificarPlanWs{
                 for(int i = 0; i < BaseDeDatos.planes.size(); i++){
                 if(BaseDeDatos.planes.get(i).getAnio().equals(plan.getAnio())){
                     try {
-                        BaseDeDatos.planes.set(i, (PlanWs)plan.clone());
+                        BaseDeDatos.planesWebServices.set(i, (PlanWs)plan.clone());
                     } catch (CloneNotSupportedException e) {
                         throw new ModificarPlanEx("No se pudo acceder al indice " + i );
                     }

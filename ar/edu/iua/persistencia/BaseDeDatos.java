@@ -10,7 +10,7 @@ public class BaseDeDatos {
 
     public static List<Plan> planes = new ArrayList<Plan>();
 
-    public static List<Plan> planesWebServices = new ArrayList<Plan>();
+    public static List<PlanWs> planesWebServices = new ArrayList<PlanWs>();
 
     public static Plan getPlan (int index) throws CloneNotSupportedException{
         
