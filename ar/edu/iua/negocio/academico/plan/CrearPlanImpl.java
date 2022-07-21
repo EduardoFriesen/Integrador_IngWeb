@@ -10,7 +10,7 @@ public class CrearPlanImpl implements CrearPlan {
 
     public boolean crear(Plan plan) throws CrearPlanEx {
         if(plan == null){
-            throw new CrearPlanEx("El plan es nulo. VerificarIntegridad.java");//Plan no puede ser null
+            throw new CrearPlanEx("El plan es nulo.");//Plan no puede ser null
         }
         if (!plan.isEstadoActivo() && !plan.isEstadoNoActivo() && !plan.isEstadoBorrador()) {
             return false;

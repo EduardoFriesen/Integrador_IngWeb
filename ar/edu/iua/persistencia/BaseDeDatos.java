@@ -71,7 +71,7 @@ public class BaseDeDatos {
     public static boolean setPlanWs (int index, PlanWs plan) throws CloneNotSupportedException{
         boolean bandera = false;
     
-        planesWebServices.set(index, (PlanWs)plan.clone());
+        planesWebServices.set(index, (PlanWs) plan.clone());
         bandera = true;
         
         return bandera;
