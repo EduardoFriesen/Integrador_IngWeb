@@ -4,9 +4,9 @@ import ar.edu.iua.modelo.Objeto;
 
 public abstract class Profesor extends Objeto{
 
-    abstract public Integer getCodigo();
+    abstract public Integer getId();
 
-    abstract public void setCodigo(Integer cod);
+    abstract public void setId(int cod);
 
     abstract public String getNombre();
 
@@ -16,9 +16,5 @@ public abstract class Profesor extends Objeto{
 
     abstract public void setApellido(String apellido);
 
-    abstract public String getDni();
-
-    abstract public void setDni(String dni); 
-    
     
 }

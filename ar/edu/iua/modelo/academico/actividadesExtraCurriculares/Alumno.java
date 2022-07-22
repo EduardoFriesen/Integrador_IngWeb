@@ -6,7 +6,7 @@ public abstract class Alumno extends Objeto {
     
     abstract public Integer getId();
 
-    abstract public void setId(Integer id);
+    abstract public void setId(int id);
 
     abstract public String getNombre();
 
