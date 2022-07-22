@@ -1,27 +1,17 @@
 package ar.edu.iua.modelo.academico.actividadesExtraCurriculares;
 
-import ar.edu.iua.modelo.academico.plan.AnioPlan;
 
 public class ActividadImpl extends Actividad{
     
-    private AnioPlan anio;
     private Integer codigo;
     private String nombre;
+    private Estado estado;
     private Double cargaHoraria;
 
-    public ActividadImpl(AnioPlan anio, Integer codigo, String nombre, Double cargaHoraria) {
-        this.anio = anio;
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.cargaHoraria = cargaHoraria;
-    }
-
-    public AnioPlan getAnio() {
-        return anio;
-    }
-
-    void setAnio(AnioPlan anio) {
-        this.anio = anio;
+    private enum Estado {
+        BORRADOR,
+        ACTIVO,
+        NO_ACTIVO
     }
 
     public Integer getCodigo() {
@@ -39,6 +29,30 @@ public class ActividadImpl extends Actividad{
     public void setNombre(String nombre) {
         nombre = (nombre != null && nombre.trim().length() > 0) ? nombre.trim() : null;
         this.nombre = nombre;
+    }
+
+    public void setEstadoBorrador() {
+        estado = Estado.BORRADOR;
+    }
+
+    public void setEstadoActivo() {
+        estado = Estado.ACTIVO;
+    }
+
+    public void setEstadoNoActivo() {
+        estado = Estado.NO_ACTIVO;
+    }
+
+    public boolean isEstadoBorrador() {
+        return estado == Estado.BORRADOR;
+    }
+
+    public boolean isEstadoActivo() {
+        return estado == Estado.ACTIVO;
+    }
+
+    public boolean isEstadoNoActivo() {
+        return estado == Estado.NO_ACTIVO;
     }
 
     public Double getCargaHoraria() {
@@ -82,7 +96,7 @@ public class ActividadImpl extends Actividad{
     @Override
     public String toStringFull() {
 
-        String s = (anio != null ? anio.toString() : "") + "\n" + (nombre != null ? nombre.toString() : "") + "\n" +
+        String s = (nombre != null ? nombre.toString() : "") + "\n" + (nombre != null ? nombre.toString() : "") + "\n" +
         (codigo != null ? codigo.toString() : "") + "\n" + (cargaHoraria != null ? cargaHoraria.toString() : "") + "\n";
 
         return s.trim();
