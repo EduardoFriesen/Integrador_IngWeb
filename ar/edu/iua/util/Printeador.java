@@ -24,7 +24,7 @@ public class Printeador {
             System.out.println("| " + "Ingrese [3] Para ver la Base de Datos. " + "         |");
             System.out.println("| " + "Ingrese [2] Para ver las Materias por su Anio. " + " |");
             System.out.println("| " + "Ingrese [1] Para ver los Planes. " + "               |");
-            System.out.println("| " + "Ingrese [0] Para salir" + "                          |");
+            System.out.println("| " + "Ingrese [0] Para salir e iniciar el servidor" + "    |");
             System.out.println("+-------------------------------------------------+");
                 opcion = consola.nextInt();
             if (opcion != 0) {
@@ -58,13 +58,13 @@ public class Printeador {
                
                 } else {
                     System.out.println("+-----------------------+");
-                    System.out.println("| " + "Ingrese opcion valida" + " |");
+                    System.out.println("| Ingrese opcion valida |");
                     System.out.println("+-----------------------+");
                 }
             }
             } while (opcion != 0);
                 System.out.println("+-----------------------+");
-                System.out.println(   "|     "+"Hasta Pronto!" + "     |");
+                System.out.println("| Iniciando Servidor... |");
                 System.out.println("+-----------------------+");
                 consola.close();
             }

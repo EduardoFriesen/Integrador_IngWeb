@@ -5,6 +5,7 @@ import java.util.List;
 import ar.edu.iua.Excepciones.modeloEx.BuscarPlanEx;
 import ar.edu.iua.Excepciones.modeloEx.CrearPlanEx;
 import ar.edu.iua.Excepciones.modeloEx.ModificarPlanEx;
+import ar.edu.iua.Excepciones.web_services_ex.serverEx;
 import ar.edu.iua.interfazusuario.BuscarEImprimirPlanes;
 import ar.edu.iua.interfazusuario.BuscarEImprimirPlanesImpl;
 
@@ -21,10 +22,11 @@ import ar.edu.iua.negocio.academico.plan.ModificarPlanImpl;
 
 import java.util.Scanner;
 import ar.edu.iua.persistencia.BaseDeDatos;
+import ar.edu.iua.webServices.server;
 
 public class Pruebas {
 
-    public void probar() throws CrearPlanEx, BuscarPlanEx, ModificarPlanEx {
+    public void probar() throws CrearPlanEx, BuscarPlanEx, ModificarPlanEx, serverEx {
 
         List<Plan> planes = GenerarEjemplosDePlanes.generar(5, false);
 
@@ -53,6 +55,9 @@ public class Pruebas {
         BuscarEImprimirPlanes buscarEImprimirPlanes = new BuscarEImprimirPlanesImpl();
 
         buscarEImprimirPlanes.buscar(" Informática ' ");
+
+        server.startServer();
+
 
 
 

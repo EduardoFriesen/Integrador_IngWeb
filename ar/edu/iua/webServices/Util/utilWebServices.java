@@ -8,8 +8,8 @@ import java.util.Map;
 
 import com.sun.net.httpserver.HttpExchange;
 
-
 public class utilWebServices {
+
     public static Map<String, String> leerParametrosConsulta(String path) throws IOException {
 
         Map<String, String> params = new HashMap<>();
@@ -31,4 +31,5 @@ public class utilWebServices {
         InputStream inputStream = exchange.getRequestBody();
         return new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
     }
+    
 }

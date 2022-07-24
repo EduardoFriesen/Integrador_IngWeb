@@ -3,11 +3,11 @@ package ar.edu.iua.negocio_webservices.academico.plan;
 import java.util.List;
 
 import ar.edu.iua.Excepciones.modeloEx.BorrarPlanEx;
-import ar.edu.iua.modelo_webservices.academico.PlanImplWs;
+import ar.edu.iua.modelo_webservices.academico.PlanWs;
 
 public class BorrarPlanesImplWs implements BorrarPlanesWs{
     @Override
-    public boolean borrar(List<PlanImplWs> planes) throws BorrarPlanEx {
+    public boolean borrar(List<PlanWs> planes) throws BorrarPlanEx {
         boolean bandera = false;
         
         for(int ii = 0; ii < planes.size(); ii++){

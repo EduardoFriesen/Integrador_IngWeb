@@ -2,12 +2,11 @@ package ar.edu.iua.negocio_webservices.academico.plan;
 
 import ar.edu.iua.Excepciones.modeloEx.CrearPlanEx;
 import ar.edu.iua.Excepciones.modeloEx.ModificarPlanEx;
-import ar.edu.iua.modelo_webservices.academico.PlanImplWs;
 import ar.edu.iua.modelo_webservices.academico.PlanWs;
 import ar.edu.iua.persistencia.BaseDeDatos;
 
 public class ModificarPlanImplWs implements ModificarPlanWs{
-    public boolean modificar(PlanImplWs plan) throws  ModificarPlanEx {
+    public boolean modificar(PlanWs plan) throws  ModificarPlanEx {
         boolean b = false;   
         CrearPlanWs crearPlan = new CrearPlanImplWs(); 
         try{
