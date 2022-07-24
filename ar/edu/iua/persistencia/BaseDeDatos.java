@@ -6,6 +6,7 @@ import java.util.List;
 import ar.edu.iua.modelo.academico.actividadesExtraCurriculares.Actividad;
 import ar.edu.iua.modelo.academico.plan.Plan;
 import ar.edu.iua.modelo_webservices.academico.PlanWs;
+import ar.edu.iua.modelo_webservices.academico.actividadesExtraCurriculaesWs.ActividadWs;
 
 public class BaseDeDatos {
 
@@ -14,6 +15,8 @@ public class BaseDeDatos {
     public static List<Actividad> actividades = new ArrayList<Actividad>();
 
     public static List<PlanWs> planesWebServices = new ArrayList<PlanWs>();
+
+    public static List<ActividadWs> actividadesWs = new ArrayList<ActividadWs>();
 
     public static Plan getPlan (int index) throws CloneNotSupportedException{
         
@@ -144,6 +147,45 @@ public class BaseDeDatos {
         List<PlanWs> clonePlanes = new ArrayList<>();
         for(PlanWs plan:planesWebServices){
             clonePlanes.add((PlanWs)plan.clone());
+        }
+        return clonePlanes;
+    }
+
+    public static int actividadesSizeWs (){
+        return actividadesWs.size();
+    }
+
+    public static ActividadWs getActividadesWs (int index) throws CloneNotSupportedException{
+        
+        return (ActividadWs)planesWebServices.get(index).clone();
+    }
+
+    public static boolean setActividadWs (int index, ActividadWs actividad) throws CloneNotSupportedException{
+        boolean bandera = false;
+    
+        actividadesWs.set(index, (ActividadWs) actividad.clone());
+        bandera = true;
+        
+        return bandera;
+    }
+    
+    public static boolean addActividadWs (ActividadWs actividad) throws CloneNotSupportedException{
+        boolean bandera = false;
+        
+        actividadesWs.add((ActividadWs) actividad.clone());
+        bandera = true;
+
+        return bandera;
+    }
+
+    public static void removeActividadWs (int index){
+        actividadesWs.remove(index);
+    }
+
+    public static List<ActividadWs> getListActividadWs () throws CloneNotSupportedException{
+        List<ActividadWs> clonePlanes = new ArrayList<>();
+        for(ActividadWs actividad:actividadesWs){
+            clonePlanes.add((ActividadWs)actividad.clone());
         }
         return clonePlanes;
     }
